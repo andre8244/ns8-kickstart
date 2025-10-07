@@ -6,9 +6,9 @@
     ],
     "forkProcessing": "enabled",
     "vulnerabilityAlerts": {
-        "enabled": true,
-        "severity": ["high", "critical"]
+        "enabled": true
     },
+    "osvVulnerabilityAlerts": true,
     "branchPrefix": "renovate-",
     "branchNameStrict": true,
     "customManagers": [
