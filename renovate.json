@@ -6,7 +6,7 @@
     ],
     "forkProcessing": "enabled",
     "vulnerabilityAlerts": {
-        "enabled": false
+        "enabled": true
     },
     "osvVulnerabilityAlerts": true,
     "branchPrefix": "renovate-",
