@@ -7,9 +7,6 @@
     "forkProcessing": "enabled",
     "branchPrefix": "renovate-",
     "branchNameStrict": true,
-    "ignorePaths": [
-        "**/ui/**"
-    ],
     "customManagers": [
         {
             "customType": "regex",
