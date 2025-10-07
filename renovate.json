@@ -5,6 +5,10 @@
         ":disableDependencyDashboard"
     ],
     "forkProcessing": "enabled",
+    "vulnerabilityAlerts": {
+        "enabled": true,
+        "severity": ["high", "critical"]
+    },
     "branchPrefix": "renovate-",
     "branchNameStrict": true,
     "customManagers": [
