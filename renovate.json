@@ -6,7 +6,8 @@
   ],
   "forkProcessing": "enabled",
   "vulnerabilityAlerts": {
-    "enabled": true
+    "enabled": true,
+    "ignoreDeps": ["vue"]
   },
   "osvVulnerabilityAlerts": true,
   "branchPrefix": "renovate-",
@@ -29,12 +30,6 @@
     },
     {
       "matchDatasources": ["npm"],
-      "enabled": false
-    },
-    {
-      "matchPackageNames": ["vue"],
-      "matchCurrentVersion": "<= 3.0.0",
-      "allowedVersions": "<= 3.0.0",
       "enabled": false
     }
   ]
