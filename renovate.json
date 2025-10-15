@@ -33,10 +33,9 @@
     },
     {
       "matchPackageNames": ["vue"],
-      "allowedVersions": "< 3",
-      "vulnerabilityAlerts": {
-        "enabled": false
-      }
+      "matchCurrentVersion": "< 3.0.0",
+      "allowedVersions": "< 3.0.0",
+      "enabled": false
     }
   ]
 }
