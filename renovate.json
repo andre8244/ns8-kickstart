@@ -5,11 +5,6 @@
     ":disableDependencyDashboard"
   ],
   "forkProcessing": "enabled",
-  "vulnerabilityAlerts": {
-    "enabled": true,
-    "ignoreDeps": ["vue"]
-  },
-  "osvVulnerabilityAlerts": true,
   "branchPrefix": "renovate-",
   "branchNameStrict": true,
   "customManagers": [
