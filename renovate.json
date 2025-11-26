@@ -1,31 +1,73 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "local>NethServer/.github:renovate-config",
-    ":disableDependencyDashboard"
-  ],
-  "forkProcessing": "enabled",
-  "branchPrefix": "renovate-",
-  "branchNameStrict": true,
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": ["(^|/)test-module\\.sh$", "(^|/)build-images?\\.sh$"],
-      "matchStrings": [
-        "docker\\.io\\/(?:library\\/)?(?<depName>[-0-9a-z_\\/.]+):(?<currentValue>[-0-9a-zA-Z_.]+)",
-        "(?<depName>(?:ghcr|quay)\\.io\\/[-0-9a-z_\\/.]+):(?<currentValue>[-0-9a-zA-Z_.]+)"
-      ],
-      "datasourceTemplate": "docker"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchPackageNames": ["node"],
-      "allowedVersions": "<=18"
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":disableDependencyDashboard"
+    ],
+    "branchPrefix": "renovate-",
+    "branchNameStrict": true,
+    "vulnerabilityAlerts": {
+        "enabled": true,
+        "ignoreDeps": ["vue"]
     },
-    {
-      "matchDatasources": ["npm"],
-      "enabled": false
-    }
-  ]
+    "osvVulnerabilityAlerts": true,
+    "customManagers": [
+        {
+            "groupName": "Debian/Ubuntu packages",
+            "groupSlug": "deb-update",
+            "fileMatch": [
+                "(^|/)Containerfile$",
+                "(^|/)Dockerfile$"
+            ],
+            "matchStringsStrategy": "recursive",
+            "matchStrings": [
+                "#\\s*renovate-debian:\\s*(suite=(?<suite>.*))?[\\s\\S]+",
+                "(?:^|\\s)(?<depName>[a-z0-9][a-z0-9+._-]+?)=(?<currentValue>[0-9]+[^\\s]*?)(?:\\s|\\\\|$)"
+            ],
+            "datasourceTemplate": "deb",
+            "versioningTemplate": "deb",
+            "registryUrlTemplate": "https://deb.debian.org/debian?suite={{#if suite }}{{suite}}{{else}}stable{{/if}}&components=main,contrib,non-free&binaryArch=amd64"
+        },
+        {
+            "groupName": "Debian/Ubuntu packages",
+            "groupSlug": "deb-update",
+            "fileMatch": [
+                "(^|/)Containerfile$",
+                "(^|/)Dockerfile$"
+            ],
+            "matchStringsStrategy": "recursive",
+            "matchStrings": [
+                "#\\s*renovate-ubuntu:\\s*(suite=(?<suite>.*))?[\\s\\S]+",
+                "(?:^|\\s)(?<depName>[a-z0-9][a-z0-9+._-]+?)=(?<currentValue>[0-9]+[^\\s]*?)(?:\\s|\\\\|$)"
+            ],
+            "datasourceTemplate": "deb",
+            "versioningTemplate": "deb",
+            "registryUrlTemplate": "https://archive.ubuntu.com/ubuntu?suite={{#if suite }}{{suite}}{{else}}noble{{/if}}&components=main,universe,restricted,multiverse&binaryArch=amd64"
+        },
+        {
+            "customType": "regex",
+            "fileMatch": [
+                "(^|/)test-module\\.sh$",
+                "(^|/)build-images?\\.sh$"
+            ],
+            "matchStrings": [
+                "docker\\.io\\/(?:library\\/)?(?<depName>[-0-9a-z_\\/.]+):(?<currentValue>[-0-9a-zA-Z_.]+)",
+                "(?<depName>(?:ghcr|quay)\\.io\\/[-0-9a-z_\\/.]+):(?<currentValue>[-0-9a-zA-Z_.]+)"
+            ],
+            "datasourceTemplate": "docker"
+        }
+    ],
+    "packageRules": [
+        {
+            "matchPackageNames": [
+                "node",
+                "mcr.microsoft.com/devcontainers/javascript-node"
+            ],
+            "allowedVersions": "<=18"
+        },
+        {
+            "matchDatasources": ["npm"],
+            "enabled": false
+        }
+    ]
 }
