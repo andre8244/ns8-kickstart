@@ -14,13 +14,6 @@
     "osvVulnerabilityAlerts": true,
     "packageRules": [
         {
-            "matchPackageNames": [
-                "node",
-                "mcr.microsoft.com/devcontainers/javascript-node"
-            ],
-            "allowedVersions": "<=18"
-        },
-        {
             "matchDatasources": ["npm"],
             "enabled": false
         }
