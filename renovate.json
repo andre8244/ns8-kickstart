@@ -19,6 +19,10 @@
         {
             "matchSourceUrls": ["https://github.com/vuejs/vue-cli"],
             "enabled": false
+        },
+        {
+            "matchPackageNames": ["@carbon/vue"],
+            "allowedVersions": "<3"
         }
     ]
 }
