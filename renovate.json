@@ -19,8 +19,8 @@
             "description": "Disable major version upgrades for all npm packages"
         }
     ],
-    lockFileMaintenance: {
+    "lockFileMaintenance": {
         "enabled": true,
-        "schedule": ["before 5am on the first day of the month"],
+        "schedule": ["before 5am on the first day of the month"]
     }
 }
