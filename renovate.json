@@ -15,6 +15,10 @@
         {
             "matchPackageNames": ["vue"],
             "enabled": false
+        },
+        {
+            "matchSourceUrls": ["https://github.com/vuejs/vue-cli"],
+            "enabled": false
         }
     ]
 }
