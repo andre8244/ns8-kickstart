@@ -10,5 +10,13 @@
     "vulnerabilityAlerts": {
         "enabled": true,
         "ignoreDeps": ["vue"]
+    },
+    {
+        "packageRules": [
+            {
+                "matchPackageNames": ["vue"],
+                "enabled": false
+            }
+        ]
     }
 }
