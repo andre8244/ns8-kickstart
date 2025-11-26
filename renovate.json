@@ -6,5 +6,9 @@
     ],
     "forkProcessing": "enabled",
     "branchPrefix": "renovate-",
-    "branchNameStrict": true
+    "branchNameStrict": true,
+    "vulnerabilityAlerts": {
+        "enabled": true,
+        "ignoreDeps": ["vue"]
+    }
 }
