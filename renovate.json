@@ -11,12 +11,10 @@
         "enabled": true,
         "ignoreDeps": ["vue"]
     },
-    {
-        "packageRules": [
-            {
-                "matchPackageNames": ["vue"],
-                "enabled": false
-            }
-        ]
-    }
+    "packageRules": [
+        {
+            "matchPackageNames": ["vue"],
+            "enabled": false
+        }
+    ]
 }
