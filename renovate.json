@@ -7,6 +7,10 @@
     "forkProcessing": "enabled",
     "branchPrefix": "renovate-",
     "branchNameStrict": true,
+    "vulnerabilityAlerts": {
+        "enabled": true
+    },
+    "osvVulnerabilityAlerts": true,
     "packageRules": [
         {
             "matchDatasources": ["npm"],
@@ -14,5 +18,9 @@
             "enabled": false,
             "description": "Disable major version upgrades for all npm packages"
         }
-    ]
+    ],
+    lockFileMaintenance: {
+        "enabled": true,
+        "schedule": ["before 5am on the first day of the month"],
+    }
 }
