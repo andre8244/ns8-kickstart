@@ -13,26 +13,10 @@
     },
     "packageRules": [
         {
-            "matchPackageNames": ["vue"],
+            "matchDatasources": ["npm"],
             "matchUpdateTypes": ["major"],
-            "enabled": false
-        },
-        {
-            "matchSourceUrls": ["https://github.com/vuejs/vue-cli"],
-            "matchUpdateTypes": ["major"],
-            "enabled": false
-        },
-        {
-            "matchPackageNames": ["@carbon/vue"],
-            "allowedVersions": "<=2"
-        },
-        {
-            "matchPackageNames": ["vuex"],
-            "allowedVersions": "<=3"
-        },
-        {
-            "matchPackageNames": ["vue-i18n"],
-            "allowedVersions": "<=8"
+            "enabled": false,
+            "description": "Disable major version upgrades for all npm packages"
         }
     ]
 }
