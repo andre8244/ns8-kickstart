@@ -7,10 +7,6 @@
     "forkProcessing": "enabled",
     "branchPrefix": "renovate-",
     "branchNameStrict": true,
-    "vulnerabilityAlerts": {
-        "enabled": true,
-        "ignoreDeps": ["vue"]
-    },
     "packageRules": [
         {
             "matchDatasources": ["npm"],
