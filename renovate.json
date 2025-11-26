@@ -4,6 +4,7 @@
         "config:recommended",
         ":disableDependencyDashboard"
     ],
+    "forkProcessing": "enabled",
     "branchPrefix": "renovate-",
     "branchNameStrict": true,
     "vulnerabilityAlerts": {
