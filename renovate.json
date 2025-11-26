@@ -14,15 +14,21 @@
     "packageRules": [
         {
             "matchPackageNames": ["vue"],
+            "matchUpdateTypes": ["major"],
             "enabled": false
         },
         {
             "matchSourceUrls": ["https://github.com/vuejs/vue-cli"],
+            "matchUpdateTypes": ["major"],
             "enabled": false
         },
         {
             "matchPackageNames": ["@carbon/vue"],
             "allowedVersions": "<3"
+        },
+        {
+            "matchPackageNames": ["vuex"],
+            "allowedVersions": "<4"
         }
     ]
 }
