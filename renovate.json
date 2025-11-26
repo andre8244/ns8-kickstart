@@ -8,7 +8,8 @@
     "branchPrefix": "renovate-",
     "branchNameStrict": true,
     "vulnerabilityAlerts": {
-        "enabled": true
+        "enabled": true,
+        "ignoreDeps": ["vue"]
     },
     "osvVulnerabilityAlerts": true,
     "packageRules": [
