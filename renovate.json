@@ -24,11 +24,15 @@
         },
         {
             "matchPackageNames": ["@carbon/vue"],
-            "allowedVersions": "<3"
+            "allowedVersions": "<=2"
         },
         {
             "matchPackageNames": ["vuex"],
-            "allowedVersions": "<4"
+            "allowedVersions": "<=3"
+        },
+        {
+            "matchPackageNames": ["vue-i18n"],
+            "allowedVersions": "<=8"
         }
     ]
 }
