@@ -6,6 +6,5 @@
     ],
     "forkProcessing": "enabled",
     "branchPrefix": "renovate-",
-    "branchNameStrict": true,
-    "osvVulnerabilityAlerts": true
+    "branchNameStrict": true
 }
