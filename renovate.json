@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":disableDependencyDashboard",
+    ":enableVulnerabilityAlerts",
+    ":maintainLockFilesMonthly"
+  ],
+  "forkProcessing": "enabled",
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "rangeStrategy": "replace"
+    }
+  ]
+}
